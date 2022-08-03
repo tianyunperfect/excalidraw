@@ -16,8 +16,11 @@
         r = null;
         return context == null || context == "" || context == "undefined" ? "" : decodeURI(context);
     }
-    location.href = GetQueryString("url");
-    "cp test.html /c/Users/root/Desktop/build/index.html"
+
+    let url = GetQueryString("url");
+    if (url) {
+        location.href = url;
+    }
 </script>
 
 </body>
